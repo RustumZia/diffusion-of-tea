@@ -24,5 +24,11 @@ body {
 
 .area {
     display: grid;
-    
+}
+
+.img {
+    max-width: 30em;
+    border: thin solid black;
+    margin-left:auto;
+    margin-right:auto;
 }
