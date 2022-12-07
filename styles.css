@@ -1,21 +1,55 @@
+:root {
+    /* --bg: whitesmoke; */
+    --bg: #bbbbbb;
+    --text-color: black;
+    /* --bgitem: #e2e2e2; */
+    --bgitem: var(--bg);
+    --red: #7B120A;
+    --item-minwidth: 300px;
+}
+
 body {
-    font-family: Garamond, "Times New Roman";
-    background-color: whitesmoke;
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    background-color: var(--bg);
     font-size: 20px;
+    color: var(--text-color);
+}
+
+.title-bg {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    animation: 1s ease-in 0s bg-anim;
+    background: linear-gradient(#7B120AAA, var(--bg));
 }
 
 .title {
     text-align: center;
+    font-family: "Great Vibes", "Dancing Script", cursive;
+    font-size: 40px;
+    /* filter: drop-shadow(0px 0px 20px var(--red)); */
+    color: black;
+}
+
+.content {
+    top: -50px;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header {
     text-align: center;
+    font-family: "Great Vibes", "Dancing Script", cursive;
+    font-size: 30px;
+    color: var(--red);
+    margin: 8px;
 }
 
-.content {
-    max-width: 50em;
-    margin-left: auto;
-    margin-right: auto;
+.row {
+    grid-column: 1 / -1;
 }
 
 .circle {
@@ -24,15 +58,41 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 20em);
-    column-gap: 2em;
-    row-gap: 2em;
-    justify-content: center;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-element {
+    background-color: var(--bgitem);
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 5px;
+    font-family: "Bodoni Moda";
+}
+
+.grid-element div {
+    filter: drop-shadow(-1px -1px 4px var(--red));
+    color: white;
 }
 
 .img {
-    max-width: 15em;
-    border: thin solid black;
-    margin-left:auto;
-    margin-right:auto;
+    width: 70%;
+    /* border: thin solid black; */
+    /* box-shadow: -10px -5px 5px grey; */
+    filter: drop-shadow(-5px 0px 10px);
+}
+
+.links a {
+	display: block;
 }
