@@ -4,15 +4,16 @@
     --text-color: black;
     /* --bgitem: #e2e2e2; */
     --bgitem: var(--bg);
-    --red: #7B120A;
+    --red: #DD1111;
+    --green: #0a7b38aa;
     --item-minwidth: 300px;
 }
 
 body {
     margin: 0;
-    font-family: "Dancing Script", cursive;
+    font-family: "Bodoni Moda"; 
     background-color: var(--bg);
-    font-size: 20px;
+    font-size: 15px;
     color: var(--text-color);
 }
 
@@ -21,13 +22,13 @@ body {
     padding-top: 10px;
     padding-bottom: 100px;
     animation: 1s ease-in 0s bg-anim;
-    background: linear-gradient(#7B120AAA, var(--bg));
+    background: linear-gradient(#0a7b38aa, var(--bg));
 }
 
 .title {
     text-align: center;
     font-family: "Great Vibes", "Dancing Script", cursive;
-    font-size: 40px;
+    font-size: 60px;
     /* filter: drop-shadow(0px 0px 20px var(--red)); */
     color: black;
 }
@@ -43,9 +44,27 @@ body {
 .header {
     text-align: center;
     font-family: "Great Vibes", "Dancing Script", cursive;
-    font-size: 30px;
-    color: var(--red);
+    font-size: 40px;
     margin: 8px;
+}
+.header-china {
+    color: var(--green);
+}
+.header-japan {
+    color: var(--red);
+    
+}
+.header-britain {
+    color: black;
+}
+.text-china div {
+    filter: drop-shadow(-1px -1px 4px var(--green));
+}
+.text-japan div {
+    filter: drop-shadow(-1px -1px 4px var(--red));
+}
+.text-britain div {
+    filter: drop-shadow(-1px -1px 4px black);
 }
 
 .row {
@@ -59,16 +78,15 @@ body {
 .grid {
     display: grid;
     grid-gap: 2em;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(auto, 500px));
     width: fit-content;
-    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
 @media (max-width: 800px) {
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(auto, 500px);
     }
 }
 
@@ -78,11 +96,10 @@ body {
     margin-left: 2px;
     margin-right: 2px;
     border-radius: 5px;
-    font-family: "Bodoni Moda";
 }
 
+
 .grid-element div {
-    filter: drop-shadow(-1px -1px 4px var(--red));
     color: white;
 }
 
@@ -93,6 +110,10 @@ body {
     filter: drop-shadow(-5px 0px 10px);
 }
 
-.links a {
-	display: block;
+.links {
+    text-align: left;
+}
+
+.hanging-indent {
+    padding-left: 4em;
 }
